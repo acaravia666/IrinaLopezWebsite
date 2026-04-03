@@ -5,8 +5,8 @@ const services = [
   {
     id: 1,
     number: "01",
-    title: "Asesoría Legal Creativa",
-    description: "Para artistas, diseñadores y creadores de contenido que necesitan proteger sus obras sin perderse en jerga legal.",
+    title: "Derechos de Autor & SENADI",
+    description: "Protección legal para artistas, fotógrafos y músicos ante el SENADI. Aseguramos que tu obra intelectual esté blindada contra plagios.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -16,8 +16,8 @@ const services = [
   {
     id: 2,
     number: "02",
-    title: "Protección de Marca",
-    description: "Registra tu marca y asegura los derechos de todo lo que has construido con tanto esfuerzo y dedicación.",
+    title: "Registro de Marcas",
+    description: "Gestión completa del registro de tu marca en Ecuador. Transformamos tu identidad creativa en un activo legalmente protegido.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -27,8 +27,8 @@ const services = [
   {
     id: 3,
     number: "03",
-    title: "Contratos Estéticos",
-    description: "Documentos legales que no dan dolor de cabeza. Claros, precisos y diseñados para proteger tu negocio digital.",
+    title: "Legal Design & Contratos",
+    description: "Contratos claros, sin laberintos legales. Diseñados para proteger tus negocios creativos con un lenguaje humano y profesional.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>

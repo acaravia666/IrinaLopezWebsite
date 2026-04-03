@@ -40,7 +40,7 @@ export default function Hero() {
         >
           <div className="w-16 h-[1px] bg-brand-warm-gold" />
           <span className="text-brand-polished-stone text-[10px] uppercase tracking-[0.5em] font-light">
-            Abogada · Música · Arte
+            Abogada · Música · Propiedad Intelectual
           </span>
           <div className="w-16 h-[1px] bg-brand-warm-gold" />
         </motion.div>
@@ -62,7 +62,7 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-brand-polished-stone/80 font-subtitle italic text-lg sm:text-xl lg:text-2xl font-light tracking-wide mb-12"
         >
-          Una mezcla entre el rigor legal y la creatividad
+          Blindamos tu creatividad con el rigor legal que tu talento merece en Ecuador.
         </motion.p>
 
         {/* CTAs */}

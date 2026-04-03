@@ -77,11 +77,11 @@ export default function About() {
               transition={{ duration: 1, delay: 0.3 }}
               className="space-y-8 text-brand-oil/70 text-lg sm:text-xl leading-relaxed font-light"
             >
-              <p>
-                Soy abogada de profesión, pero mi corazón late al ritmo del arte y la creatividad. Ayudo a emprendedores y creativos a proteger sus ideas, asegurarme de que sus negocios sean sólidos, y al mismo tiempo, comparto mi propia faceta artística con el mundo.
+            <p>
+                Soy abogada de profesión en Ecuador, pero mi corazón late al ritmo del arte y la música. Ayudo a creativos a proteger sus ideas, asegurarme de que sus marcas estén registradas ante el SENADI y que sus negocios sean sólidos, mientras comparto mi propia faceta artística con el mundo.
               </p>
               <p>
-                Creo en la dualidad. No tienes que elegir entre ser estructurado y profesional o ser libre y creativo. Aquí, los contratos se firman con la misma pasión con la que se pinta un lienzo en blanco.
+                Creo en la dualidad. No tienes que elegir entre ser estructurado y profesional o ser libre y creativo. Aquí, los contratos se diseñan con la misma pasión con la que se compone una melodía; con claridad, armonía y protección total.
               </p>
             </motion.div>
             
