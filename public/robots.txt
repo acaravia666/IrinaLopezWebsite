@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://irinalopez.ec/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1

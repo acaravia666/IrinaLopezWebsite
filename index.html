@@ -1,19 +1,223 @@
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-EC" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===================== FAVICON & MANIFEST ===================== -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#d3a244" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Irina López" />
+
+    <!-- ===================== PRIMARY SEO ===================== -->
     <title>Irina López | Abogada para Creativos, Artistas y Músicos en Ecuador</title>
-    <meta name="description" content="Asesoría legal especializada para creativos, artistas y emprendedores. Protegemos tu propiedad intelectual y derechos de autor ante el SENADI en Ecuador." />
-    <meta name="keywords" content="abogada para creativos, abogados para artistas ecuador, propiedad intelectual guayaquil quito, derechos de autor músicos ecuador, registro de marca senadi, legal design ecuador" />
+    <meta name="description" content="Asesoría legal especializada para creativos, artistas y emprendedores en Ecuador. Protegemos tu propiedad intelectual y derechos de autor ante el SENADI." />
+    <meta name="keywords" content="abogada para creativos, abogados para artistas ecuador, propiedad intelectual guayaquil quito, derechos de autor músicos ecuador, registro de marca senadi, legal design ecuador, contratos artistas, derecho entretenimiento ecuador" />
     <meta name="author" content="Irina López" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://irinalopez.ec/" />
+
+    <!-- ===================== GEO / LOCALE ===================== -->
+    <meta name="geo.region" content="EC" />
+    <meta name="geo.placename" content="Ecuador" />
+    <meta name="language" content="Spanish" />
+    <meta http-equiv="content-language" content="es-EC" />
+
+    <!-- ===================== OPEN GRAPH ===================== -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Irina López — Abogada" />
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:url" content="https://irinalopez.ec/" />
     <meta property="og:title" content="Irina López | Abogada para Creativos, Artistas y Músicos en Ecuador" />
     <meta property="og:description" content="Protegemos el talento y la visión de los creativos en Ecuador. Asesoría legal en propiedad intelectual y contratos con enfoque en legal design." />
+    <meta property="og:image" content="https://irinalopez.ec/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Irina López — Abogada para Creativos, Artistas y Músicos en Ecuador" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- ===================== TWITTER / X CARD ===================== -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Irina López | Abogada para Creativos & Artistas" />
-    <meta name="twitter:description" content="Especialistas en derecho del entretenimiento y propiedad intelectual en Ecuador. Protege tu arte hoy mismo." />
+    <meta name="twitter:title" content="Irina López | Abogada para Creativos & Artistas en Ecuador" />
+    <meta name="twitter:description" content="Especialista en derecho del entretenimiento y propiedad intelectual en Ecuador. Protege tu arte con el rigor legal que merece." />
+    <meta name="twitter:image" content="https://irinalopez.ec/og-image.png" />
+    <meta name="twitter:image:alt" content="Irina López — Abogada para Creativos y Artistas" />
+
+    <!-- ===================== STRUCTURED DATA — JSON-LD ===================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://irinalopez.ec/#website",
+          "url": "https://irinalopez.ec/",
+          "name": "Irina López — Abogada para Creativos",
+          "description": "Asesoría legal especializada en propiedad intelectual, derechos de autor y contratos para creativos, artistas y músicos en Ecuador.",
+          "inLanguage": "es-EC",
+          "publisher": {
+            "@id": "https://irinalopez.ec/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://irinalopez.ec/#person",
+          "name": "Irina López",
+          "url": "https://irinalopez.ec/",
+          "jobTitle": "Abogada especialista en Propiedad Intelectual",
+          "description": "Abogada y Licenciada en Música, especialista en derecho de la propiedad intelectual, derechos de autor y legal design para creativos, artistas y músicos en Ecuador.",
+          "knowsAbout": [
+            "Propiedad Intelectual",
+            "Derechos de Autor",
+            "Registro de Marcas",
+            "Legal Design",
+            "Contratos para Artistas",
+            "Derecho del Entretenimiento",
+            "SENADI Ecuador"
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "name": "Licenciada en Derecho"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "degree",
+              "name": "Licenciada en Música"
+            }
+          ],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://irinalopez.ec/og-image.png"
+          },
+          "worksFor": {
+            "@id": "https://irinalopez.ec/#organization"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": ["LegalService", "LocalBusiness"],
+          "@id": "https://irinalopez.ec/#organization",
+          "name": "Irina López — Asesoría Legal para Creativos",
+          "url": "https://irinalopez.ec/",
+          "logo": "https://irinalopez.ec/favicon.png",
+          "image": "https://irinalopez.ec/og-image.png",
+          "description": "Estudio jurídico especializado en propiedad intelectual, derechos de autor, registro de marcas ante el SENADI y contratos para creativos, artistas y músicos en Ecuador.",
+          "priceRange": "$$",
+          "currenciesAccepted": "USD",
+          "paymentAccepted": "Transferencia bancaria, efectivo",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ecuador"
+          },
+          "knowsLanguage": ["es"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios Legales para Creativos",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Derechos de Autor & SENADI",
+                  "description": "Registro y protección de obras creativas, musicales y artísticas ante el SENADI en Ecuador."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Registro de Marcas",
+                  "description": "Registro y protección de marcas comerciales y nombres artísticos ante el SENADI."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Legal Design & Contratos",
+                  "description": "Redacción y revisión de contratos artísticos, licencias musicales y acuerdos creativos con enfoque en legal design."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://irinalopez.ec/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://irinalopez.ec/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Servicios",
+              "item": "https://irinalopez.ec/#servicios"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Sobre Mí",
+              "item": "https://irinalopez.ec/#sobre-mi"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Blog",
+              "item": "https://irinalopez.ec/#blog"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://irinalopez.ec/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es el SENADI y por qué necesito registrar mi obra?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El SENADI (Servicio Nacional de Derechos Intelectuales) es el organismo ecuatoriano encargado de proteger la propiedad intelectual. Registrar tu obra garantiza tus derechos legales de autor y te permite actuar ante cualquier uso no autorizado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo puedo registrar mi marca como artista o creativo en Ecuador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El registro de marcas en Ecuador se realiza ante el SENADI. Irina López te guía en todo el proceso: búsqueda de antecedentes, clasificación de niza, presentación de solicitud y seguimiento hasta la obtención del título."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es el legal design y cómo beneficia a los creativos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El legal design aplica principios de diseño y comunicación visual al derecho, haciendo que los contratos y documentos legales sean comprensibles y útiles para artistas y creativos que no tienen formación jurídica."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ===================== PERFORMANCE / PRECONNECT ===================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
   </head>
   <body>
     <div id="root"></div>

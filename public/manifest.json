@@ -1,0 +1,28 @@
+{
+  "name": "Irina López — Abogada para Creativos",
+  "short_name": "Irina López",
+  "description": "Asesoría legal especializada en propiedad intelectual para creativos, artistas y músicos en Ecuador.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#282012",
+  "theme_color": "#d3a244",
+  "lang": "es-EC",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["legal", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
