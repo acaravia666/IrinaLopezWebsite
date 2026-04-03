@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* ─── Local Fonts ─────────────────────────────────────────── */
+@font-face {
+  font-family: 'New York';
+  src: url('./assets/fonts/NewYork.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Armany';
+  src: url('./assets/fonts/Armany-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('./assets/fonts/MuseoSans.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('./assets/fonts/MuseoSans-500.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url('./assets/fonts/MuseoSans-500-Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Italic-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── Design Tokens ───────────────────────────────────────── */
+@theme {
+  --color-brand-calming-white: #fdfbf3;
+  --color-brand-polished-stone: #d9c6ac;
+  --color-brand-warm-gold: #d3a244;
+  --color-brand-well-read: #a43f37;
+  --color-brand-oil: #282012;
+
+  --font-header: 'New York', 'Playfair Display', serif;
+  --font-subtitle: 'Armany', 'DM Serif Display', serif;
+  --font-body: 'Museo Sans', 'Inter', sans-serif;
+
+  --spacing-128: 32rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-calming-white);
+    color: var(--color-brand-oil);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-warm-gold);
+    color: var(--color-brand-calming-white);
+  }
+
+  /* Custom scrollbar — brand palette */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-calming-white);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-polished-stone);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-warm-gold);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    color: var(--color-brand-well-read);
+  }
+
+  .subtitle {
+    font-family: var(--font-subtitle);
+    font-style: italic;
+  }
+
+  /* Focus ring — brand gold */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-warm-gold);
+    outline-offset: 3px;
+  }
+}
