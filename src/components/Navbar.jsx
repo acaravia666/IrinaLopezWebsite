@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <a href="#" aria-label="Irina Lopez – inicio">
-              <img src={logoColor} alt="Irina López – Abogada & Licenciada en Música" className="h-16 w-auto" />
+              <img src={logoColor} alt="Irina López – Abogada & Licenciada en Música" className="h-[72px] w-auto" />
             </a>
           </div>
           <div className="hidden lg:flex space-x-8 items-center">
