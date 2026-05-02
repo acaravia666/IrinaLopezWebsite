@@ -96,7 +96,7 @@ export default function About() {
               transition={{ delay: 0.8, type: 'spring', stiffness: 100 }}
               className="mt-12"
             >
-              <svg className="h-14 text-brand-ink opacity-40" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="h-14 text-brand-ink opacity-40" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M10 40C30 30 50 10 70 20C90 30 60 50 80 40C100 30 140 10 160 20C180 30 170 40 190 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>
             </motion.div>

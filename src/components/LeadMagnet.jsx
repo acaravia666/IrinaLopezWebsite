@@ -19,7 +19,7 @@ export default function LeadMagnet() {
         <div className="bg-brand-cream p-8 md:p-16 shadow-xl relative overflow-hidden rounded-2xl">
 
           {/* Decorative gold orb */}
-          <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/8 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-72 h-72 bg-brand-gold/8 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" aria-hidden="true" />
 
           <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
             {/* Image */}
