@@ -25,6 +25,13 @@
     font-display: swap;
   }
   @font-face {
+    font-family: 'MuseoSans';
+    src: url('./assets/fonts/MuseoSans-500-Italic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
     font-family: 'Armany';
     src: url('./assets/fonts/Armany-Regular.otf') format('opentype');
     font-weight: normal;
@@ -124,11 +131,11 @@
     @apply font-heading text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-brand-ink;
   }
   .service-card {
-    border: 1px solid rgba(217, 198, 172, 0.4);
-    border-top: 3px solid rgba(211, 162, 68, 0.35);
-    transition: border-top-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    border: 1px solid color-mix(in srgb, var(--color-brand-sand) 40%, transparent);
+    border-top: 3px solid color-mix(in srgb, var(--color-brand-gold) 35%, transparent);
+    transition: border-top-color 0.3s ease;
   }
   .service-card:hover {
-    border-top-color: #D3A244;
+    border-top-color: var(--color-brand-gold);
   }
 }
