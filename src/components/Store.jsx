@@ -7,7 +7,7 @@ const products = [
     title: 'Librito Legal para Creativos',
     type: 'E-Book',
     price: '$29',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2574&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2574&auto=format&fit=crop',
     description: 'Todo lo que necesitas saber antes de lanzar tu primer proyecto creativo al mundo, explicado de forma simple.',
   },
   {
@@ -15,7 +15,7 @@ const products = [
     title: 'Plantilla de Contrato Freelance',
     type: 'Plantilla',
     price: '$49',
-    image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2574&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2574&auto=format&fit=crop',
     description: 'Un contrato listo para usar, diseñado estéticamente y blindado legalmente para proteger tu trabajo.',
   },
 ];

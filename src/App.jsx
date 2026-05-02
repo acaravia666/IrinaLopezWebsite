@@ -11,15 +11,23 @@ import ParallaxBreak from './components/ParallaxBreak';
 
 function App() {
   return (
-    <div className="bg-brand-calming-white min-h-screen font-body relative overflow-x-hidden text-brand-oil">
+    <div className="bg-brand-cream min-h-screen font-body relative overflow-x-hidden text-brand-ink">
       <Navbar />
       <Hero />
       <About />
-      <ParallaxBreak image="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop" height="h-[70vh]" overlay="bg-brand-warm-gold/30" />
+      <ParallaxBreak
+        image="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop"
+        height="h-[70vh]"
+        tint="bg-brand-gold/20"
+      />
       <Services />
       <Store />
       <LeadMagnet />
-      <ParallaxBreak image="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2670&auto=format&fit=crop" height="h-[75vh]" overlay="bg-brand-well-read/35" />
+      <ParallaxBreak
+        image="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2670&auto=format&fit=crop"
+        height="h-[75vh]"
+        tint="bg-brand-terracotta/20"
+      />
       <BlogPreview />
       <Newsletter />
       <Footer />

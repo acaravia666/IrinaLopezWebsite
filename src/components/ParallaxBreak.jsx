@@ -1,22 +1,27 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-export default function ParallaxBreak({ image, height = "h-[60vh]", overlay = "bg-brand-oil/30" }) {
+export default function ParallaxBreak({ image, height = 'h-[60vh]', tint = 'bg-brand-gold/20' }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ['start end', 'end start'],
   });
-  
-  // The image is taller than the container (140%) and moves from -20% to 20%
-  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+
+  // Image travels ±25% — more dramatic window feel
+  const y = useTransform(scrollYProgress, [0, 1], ['-25%', '25%']);
 
   return (
-    <div ref={ref} className={`relative w-full ${height} overflow-hidden`}>
-      <motion.div style={{ y }} className="absolute inset-0 z-0 h-[140%] -top-[20%] w-full">
-        <img src={image} className="w-full h-full object-cover grayscale-[10%]" alt="Parallax Background" />
-        <div className={`absolute inset-0 mix-blend-multiply ${overlay}`} />
+    <div ref={ref} className={`relative w-full ${height} overflow-hidden`} aria-hidden="true">
+      {/* Parallax image layer — 150% tall so it has room to travel */}
+      <motion.div style={{ y }} className="absolute inset-0 w-full h-[150%] -top-[25%]">
+        <img src={image} alt="" className="w-full h-full object-cover" />
       </motion.div>
+
+      {/* Dark base vignette */}
+      <div className="absolute inset-0 bg-brand-ink/40" />
+      {/* Brand color tint on top */}
+      <div className={`absolute inset-0 ${tint}`} />
     </div>
   );
 }
