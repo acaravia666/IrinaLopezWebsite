@@ -8,9 +8,9 @@ export default function About() {
     offset: ['start end', 'end start'],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
-  const blockY = useTransform(scrollYProgress, [0, 1], ['12%', '-12%']);
-  const textY = useTransform(scrollYProgress, [0, 1], ['4%', '-4%']);
+  const imageY = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
+  const blockY = useTransform(scrollYProgress, [0, 1], ['25%', '-25%']);
+  const textY  = useTransform(scrollYProgress, [0, 1], ['4%', '-4%']);
 
   return (
     <section id="sobre-mi" ref={containerRef} className="py-32 md:py-48 bg-brand-cream overflow-hidden">
@@ -31,7 +31,7 @@ export default function About() {
               className="aspect-[4/5] relative z-10 w-full max-w-sm mx-auto lg:max-w-none overflow-hidden shadow-2xl rounded-xl"
             >
               <motion.img
-                style={{ y: imageY, scale: 1.15 }}
+                style={{ y: imageY, scale: 1.25 }}
                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2576&auto=format&fit=crop"
                 alt="Irina Lopez"
                 className="w-full h-full object-cover grayscale-[8%] brightness-95"

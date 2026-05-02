@@ -1,34 +1,17 @@
 import { motion } from 'framer-motion';
-
-const posts = [
-  {
-    id: 1,
-    title: 'Por qué necesitas registrar tu marca antes de lanzar',
-    category: 'Legal 101',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2670&auto=format&fit=crop',
-    date: '12 Oct, 2026',
-  },
-  {
-    id: 2,
-    title: 'El arte de negociar como creativo freelance',
-    category: 'Negocios',
-    image: 'https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=2574&auto=format&fit=crop',
-    date: '28 Sep, 2026',
-  },
-  {
-    id: 3,
-    title: 'Inspiración vs Plagio: Dónde está la línea legal',
-    category: 'Propiedad Intelectual',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2671&auto=format&fit=crop',
-    date: '15 Sep, 2026',
-  },
-];
+import { posts } from '../data/posts';
 
 const categoryStyles = {
-  'Legal 101': 'bg-brand-terracotta text-brand-cream',
-  'Negocios': 'bg-brand-gold text-brand-ink',
-  'Propiedad Intelectual': 'bg-brand-ink text-brand-cream',
+  'Legal 101':            'bg-brand-terracotta text-brand-cream',
+  'Propiedad Intelectual':'bg-brand-ink text-brand-cream',
+  'Negocios':             'bg-brand-gold text-brand-ink',
+  'Cultura & Política':   'bg-brand-sand text-brand-ink',
+  'Música':               'bg-brand-terracotta/80 text-brand-cream',
+  'Comunidad':            'bg-brand-muted text-brand-cream',
+  'Voces de la Escena':   'bg-brand-ink/75 text-brand-cream',
 };
+
+const featured = posts.slice(0, 3);
 
 export default function BlogPreview() {
   return (
@@ -68,7 +51,7 @@ export default function BlogPreview() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
+          {featured.map((post, index) => (
             <motion.article
               key={post.id}
               initial={{ opacity: 0, scale: 0.97 }}
@@ -92,9 +75,12 @@ export default function BlogPreview() {
                 <span className="text-[10px] text-brand-ink/35 font-heading uppercase tracking-widest mb-3 block">
                   {post.date}
                 </span>
-                <h3 className="font-display font-bold text-brand-ink text-lg leading-snug mb-auto pb-4 group-hover:text-brand-terracotta transition-colors duration-300">
+                <h3 className="font-display font-bold text-brand-ink text-lg leading-snug mb-3 group-hover:text-brand-terracotta transition-colors duration-300">
                   {post.title}
                 </h3>
+                <p className="text-brand-ink/55 font-body text-sm leading-relaxed mb-auto pb-4">
+                  {post.excerpt}
+                </p>
                 <div className="pt-4 border-t border-brand-sand/40">
                   <a
                     href="#blog"
