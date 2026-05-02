@@ -1,119 +1,134 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap');
 
 /* ─── Local Fonts ─────────────────────────────────────────── */
-@font-face {
-  font-family: 'New York';
-  src: url('./assets/fonts/NewYork.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Armany';
-  src: url('./assets/fonts/Armany-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Museo Sans';
-  src: url('./assets/fonts/MuseoSans.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Museo Sans';
-  src: url('./assets/fonts/MuseoSans-500.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Museo Sans';
-  src: url('./assets/fonts/MuseoSans-500-Italic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./assets/fonts/Inter-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./assets/fonts/Inter-Italic-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
+@layer base {
+  @font-face {
+    font-family: 'NewYork';
+    src: url('./assets/fonts/NewYork.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'MuseoSans';
+    src: url('./assets/fonts/MuseoSans.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'MuseoSans';
+    src: url('./assets/fonts/MuseoSans-500.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Armany';
+    src: url('./assets/fonts/Armany-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Italic-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
 }
 
 /* ─── Design Tokens ───────────────────────────────────────── */
 @theme {
-  --color-brand-calming-white: #fdfbf3;
-  --color-brand-polished-stone: #d9c6ac;
-  --color-brand-warm-gold: #d3a244;
-  --color-brand-well-read: #a43f37;
-  --color-brand-oil: #282012;
+  --color-brand-cream:       #FDFBF3;
+  --color-brand-sand:        #D9C6AC;
+  --color-brand-sand-warm:   #EDE0CB;
+  --color-brand-gold:        #D3A244;
+  --color-brand-gold-dark:   #A07A2A;
+  --color-brand-terracotta:  #A43F37;
+  --color-brand-ink:         #281E12;
+  --color-brand-muted:       #7A6855;
 
-  --font-header: 'New York', 'Playfair Display', serif;
-  --font-subtitle: 'Armany', 'DM Serif Display', serif;
-  --font-body: 'Museo Sans', 'Inter', sans-serif;
+  --font-display:  'NewYork', 'Playfair Display', Georgia, serif;
+  --font-heading:  'MuseoSans', 'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-script:   'Armany', 'Dancing Script', cursive;
+  --font-cursive:  'Armany', 'Dancing Script', cursive;
+  --font-body:     'Inter', 'Helvetica Neue', sans-serif;
+  --font-accent:   'MuseoSans', 'DM Sans', sans-serif;
 
   --spacing-128: 32rem;
 }
 
 @layer base {
   body {
-    background-color: var(--color-brand-calming-white);
-    color: var(--color-brand-oil);
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-ink);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: var(--color-brand-warm-gold);
-    color: var(--color-brand-calming-white);
+    background-color: var(--color-brand-gold);
+    color: var(--color-brand-ink);
   }
 
-  /* Custom scrollbar — brand palette */
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--color-brand-calming-white);
+    background: var(--color-brand-cream);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-brand-polished-stone);
-    border-radius: 0;
+    background: var(--color-brand-sand);
+    border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-brand-warm-gold);
+    background: var(--color-brand-gold);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-header);
-    color: var(--color-brand-well-read);
+    font-family: var(--font-heading);
+    color: var(--color-brand-ink);
   }
 
-  .subtitle {
-    font-family: var(--font-subtitle);
-    font-style: italic;
-  }
-
-  /* Focus ring — brand gold */
+  /* Focus ring */
   :focus-visible {
-    outline: 2px solid var(--color-brand-warm-gold);
+    outline: 2px solid var(--color-brand-gold);
     outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-brand-ink font-heading font-semibold text-sm uppercase tracking-widest transition-colors duration-300 hover:bg-brand-gold-dark;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-brand-cream text-brand-cream font-heading font-semibold text-sm uppercase tracking-widest transition-colors duration-300 hover:bg-brand-cream hover:text-brand-ink;
+  }
+  .t-hero {
+    @apply font-display font-black leading-none tracking-tight text-brand-ink;
+    font-size: clamp(4rem, 12vw, 10rem);
+  }
+  .t-h2 {
+    @apply font-heading text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-brand-ink;
+  }
+  .service-card {
+    border: 1px solid rgba(217, 198, 172, 0.4);
+    border-top: 3px solid rgba(211, 162, 68, 0.35);
+    transition: border-top-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .service-card:hover {
+    border-top-color: #D3A244;
   }
 }
