@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 const products = [
   {
@@ -6,7 +7,7 @@ const products = [
     title: 'Librito Legal para Creativos',
     type: 'E-Book',
     price: '$29',
-    image: 'https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=2574&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2574&auto=format&fit=crop',
     description: 'Todo lo que necesitas saber antes de lanzar tu primer proyecto creativo al mundo, explicado de forma simple.',
   },
   {
@@ -14,10 +15,56 @@ const products = [
     title: 'Plantilla de Contrato Freelance',
     type: 'Plantilla',
     price: '$49',
-    image: 'https://images.unsplash.com/photo-1621509375836-cd209ec16c68?q=80&w=2574&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2574&auto=format&fit=crop',
     description: 'Un contrato listo para usar, diseñado estéticamente y blindado legalmente para proteger tu trabajo.',
   },
 ];
+
+function ProductCard({ product, index }) {
+  const imageRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: imageRef, offset: ['start end', 'end start'] });
+  const y = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.2, duration: 0.6 }}
+      className="group cursor-pointer bg-brand-cream rounded-xl shadow-md overflow-hidden flex flex-col"
+    >
+      <div ref={imageRef} className="aspect-[4/3] bg-brand-sand overflow-hidden relative">
+        <motion.img
+          style={{ y, scale: 1.25 }}
+          src={product.image}
+          alt={product.title}
+          className="w-full h-full object-cover brightness-95"
+        />
+        <div className="absolute top-4 left-4 bg-brand-terracotta px-3 py-1 text-[10px] uppercase tracking-[0.15em] font-semibold font-heading text-brand-cream rounded-sm">
+          {product.type}
+        </div>
+        <div className="absolute bottom-4 right-4 bg-brand-gold px-4 py-2 text-brand-ink font-display font-bold text-lg leading-none rounded-full">
+          {product.price}
+        </div>
+      </div>
+
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="font-display font-bold text-brand-ink text-xl mb-3 leading-snug">
+          {product.title}
+        </h3>
+        <p className="text-brand-ink/65 font-body text-sm leading-relaxed flex-grow mb-6">
+          {product.description}
+        </p>
+        <button
+          className="btn-primary w-full"
+          aria-label={`Comprar ${product.title}`}
+        >
+          Comprar Ahora
+        </button>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Store() {
   return (
@@ -50,43 +97,7 @@ export default function Store() {
 
         <div className="grid md:grid-cols-2 gap-10">
           {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="group cursor-pointer bg-brand-cream rounded-xl shadow-md overflow-hidden flex flex-col"
-            >
-              <div className="aspect-[4/3] bg-brand-sand overflow-hidden relative">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover brightness-95 group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute top-4 left-4 bg-brand-terracotta px-3 py-1 text-[10px] uppercase tracking-[0.15em] font-semibold font-heading text-brand-cream rounded-sm">
-                  {product.type}
-                </div>
-                <div className="absolute bottom-4 right-4 bg-brand-gold px-4 py-2 text-brand-ink font-display font-bold text-lg leading-none rounded-full">
-                  {product.price}
-                </div>
-              </div>
-
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="font-display font-bold text-brand-ink text-xl mb-3 leading-snug">
-                  {product.title}
-                </h3>
-                <p className="text-brand-ink/65 font-body text-sm leading-relaxed flex-grow mb-6">
-                  {product.description}
-                </p>
-                <button
-                  className="btn-primary w-full"
-                  aria-label={`Comprar ${product.title}`}
-                >
-                  Comprar Ahora
-                </button>
-              </div>
-            </motion.div>
+            <ProductCard key={product.id} product={product} index={index} />
           ))}
         </div>
 
