@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,7 +11,10 @@ import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import ParallaxBreak from './components/ParallaxBreak';
 
-function App() {
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const ArticlePage = lazy(() => import('./pages/ArticlePage'));
+
+function HomePage() {
   return (
     <div className="bg-brand-cream min-h-screen font-body relative overflow-x-hidden text-brand-ink">
       <Navbar />
@@ -35,4 +40,16 @@ function App() {
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<div className="min-h-screen bg-brand-cream" />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<ArticlePage />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  );
+}

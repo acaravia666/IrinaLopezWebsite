@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { posts } from '../data/posts';
 
 const categoryStyles = {
@@ -27,37 +28,39 @@ function BlogCard({ post, index }) {
       transition={{ delay: index * 0.15, duration: 0.6 }}
       className="group flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
     >
-      <div ref={imageRef} className="aspect-[4/3] bg-brand-sand overflow-hidden relative">
-        <motion.img
-          style={{ y, scale: 1.25 }}
-          src={post.image}
-          alt={post.title}
-          className="w-full h-full object-cover brightness-95"
-        />
-        <div className={`absolute top-3 left-3 ${categoryStyles[post.category] ?? 'bg-brand-ink text-brand-cream'} px-3 py-1 text-[10px] uppercase tracking-[0.12em] font-semibold font-heading rounded-sm`}>
-          {post.category}
+      <Link to={`/blog/${post.slug}`} className="block">
+        <div ref={imageRef} className="aspect-[4/3] bg-brand-sand overflow-hidden relative">
+          <motion.img
+            style={{ y, scale: 1.25 }}
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover brightness-95"
+          />
+          <div className={`absolute top-3 left-3 ${categoryStyles[post.category] ?? 'bg-brand-ink text-brand-cream'} px-3 py-1 text-[10px] uppercase tracking-[0.12em] font-semibold font-heading rounded-sm`}>
+            {post.category}
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="p-5 flex flex-col flex-grow">
         <span className="text-[10px] text-brand-ink/35 font-heading uppercase tracking-widest mb-3 block">
           {post.date}
         </span>
         <h3 className="font-display font-bold text-brand-ink text-lg leading-snug mb-3 group-hover:text-brand-terracotta transition-colors duration-300">
-          {post.title}
+          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
         </h3>
         <p className="text-brand-ink/55 font-body text-sm leading-relaxed mb-auto pb-4">
           {post.excerpt}
         </p>
         <div className="pt-4 border-t border-brand-sand/40">
-          <a
-            href="#blog"
+          <Link
+            to={`/blog/${post.slug}`}
             aria-label={`Leer artículo: ${post.title}`}
             className="text-[10px] uppercase tracking-[0.2em] font-semibold font-heading text-brand-ink hover:text-brand-terracotta transition-colors inline-flex items-center gap-2"
           >
             Leer artículo
             <span className="text-sm leading-none group-hover:translate-x-1 transition-transform inline-block" aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </motion.article>
@@ -108,12 +111,9 @@ export default function BlogPreview() {
         </div>
 
         <div className="mt-16 text-center">
-          <span
-            className="btn-secondary !border-brand-ink/20 !text-brand-ink/30 cursor-not-allowed inline-block"
-            aria-disabled="true"
-          >
-            Visitar el Blog Completo
-          </span>
+          <Link to="/blog" className="btn-secondary">
+            Ver todos los artículos →
+          </Link>
         </div>
 
       </div>
