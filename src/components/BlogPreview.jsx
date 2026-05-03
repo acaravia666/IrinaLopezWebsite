@@ -111,7 +111,10 @@ export default function BlogPreview() {
         </div>
 
         <div className="mt-16 text-center">
-          <Link to="/blog" className="btn-secondary">
+          <Link
+            to="/blog"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-brand-ink text-brand-ink font-heading font-semibold text-sm uppercase tracking-widest transition-colors duration-300 hover:bg-brand-ink hover:text-brand-cream"
+          >
             Ver todos los artículos →
           </Link>
         </div>
