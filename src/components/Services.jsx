@@ -113,15 +113,97 @@ export default function Services() {
 
               <div className="mt-8 pt-6 border-t border-brand-sand/40">
                 <a
-                  href="#lead-magnet"
+                  href="#asesoria"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('asesoria')?.scrollIntoView({ behavior: 'smooth' }); }}
                   className="text-[10px] uppercase tracking-[0.3em] font-semibold font-heading text-brand-terracotta hover:text-brand-gold transition-colors inline-flex items-center gap-2"
                 >
-                  Más información
+                  Agendar asesoría
                   <span className="text-base leading-none">→</span>
                 </a>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Asesorías */}
+        <div id="asesoria" className="mt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-brand-terracotta text-[10px] uppercase tracking-[0.35em] font-semibold font-heading mb-4 block">Asesoría directa</p>
+            <h3
+              className="font-display font-black text-brand-ink leading-tight tracking-tight"
+              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)' }}
+            >
+              Agenda una{' '}
+              <span className="font-script text-brand-gold" style={{ fontSize: '1.2em', lineHeight: 0.9 }}>
+                sesión conmigo
+              </span>
+            </h3>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                duration: '30 min',
+                label: 'Consulta rápida',
+                description: 'Resuelve una duda puntual o evalúa si necesitas asesoría más profunda.',
+                href: 'https://pay.hotmart.com/S100825381E?bid=1777770940780',
+              },
+              {
+                duration: '45 min',
+                label: 'Sesión estándar',
+                description: 'Revisamos tu situación legal y definimos los pasos a seguir para proteger tu trabajo.',
+                href: 'https://pay.hotmart.com/S100826960L?bid=1777771084042',
+                featured: true,
+              },
+              {
+                duration: '60 min',
+                label: 'Sesión completa',
+                description: 'Análisis detallado de tu caso con estrategia legal personalizada y plan de acción.',
+                href: 'https://pay.hotmart.com/L100827445J?bid=1777771106107',
+              },
+            ].map((slot, index) => (
+              <motion.a
+                key={slot.duration}
+                href={slot.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.12, duration: 0.6 }}
+                className={`group flex flex-col p-8 rounded-xl border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                  slot.featured
+                    ? 'bg-brand-ink border-brand-ink text-brand-cream'
+                    : 'bg-white border-brand-sand hover:border-brand-gold'
+                }`}
+              >
+                <span
+                  className={`font-display font-black leading-none mb-1 ${slot.featured ? 'text-brand-gold' : 'text-brand-terracotta'}`}
+                  style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)' }}
+                >
+                  {slot.duration}
+                </span>
+                <span className={`text-[10px] uppercase tracking-[0.25em] font-semibold font-heading mb-6 ${slot.featured ? 'text-brand-cream/60' : 'text-brand-ink/45'}`}>
+                  {slot.label}
+                </span>
+                <p className={`font-body text-sm leading-relaxed flex-grow mb-8 ${slot.featured ? 'text-brand-cream/75' : 'text-brand-ink/65'}`}>
+                  {slot.description}
+                </p>
+                <span className={`inline-flex items-center justify-center px-6 py-3 rounded-full text-[10px] uppercase tracking-widest font-semibold font-heading transition-colors duration-300 ${
+                  slot.featured
+                    ? 'bg-brand-gold text-brand-ink group-hover:bg-brand-cream'
+                    : 'bg-brand-ink text-brand-cream group-hover:bg-brand-terracotta'
+                }`}>
+                  Reservar →
+                </span>
+              </motion.a>
+            ))}
+          </div>
         </div>
 
       </div>
