@@ -53,13 +53,13 @@ export default function LeadMagnet() {
                 className="font-display font-black text-brand-ink leading-tight tracking-tight mb-6"
                 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
               >
-                El Checklist{' '}
+                Guía para aplicar a{' '}
                 <span className="font-script text-brand-gold block" style={{ fontSize: '1.2em', lineHeight: 0.95 }}>
-                  Legal Imprescindible
+                  fondos concursables
                 </span>
               </h2>
               <p className="text-brand-ink/70 font-body text-lg mb-8 max-w-lg leading-relaxed">
-                Antes de lanzar tu próximo gran proyecto, asegúrate de tener las bases cubiertas. Descarga mi guía paso a paso para proteger tus creaciones sin estrés.
+                Una guía práctica y gratuita con todo lo que necesitas para presentar una solicitud sólida: requisitos, errores comunes y los pasos que marcan la diferencia.
               </p>
 
               {submitted ? (
@@ -98,7 +98,7 @@ export default function LeadMagnet() {
                       />
                     </div>
                     <button type="submit" className="btn-primary w-full mt-4">
-                      Quiero la Guía Gratis →
+                      Enviar y Descargar Gratis →
                     </button>
                   </div>
                   <p className="text-[10px] uppercase tracking-wider text-brand-ink/35 mt-4 text-center font-heading">
