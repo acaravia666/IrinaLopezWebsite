@@ -36,13 +36,10 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] uppercase tracking-[0.25em] font-semibold font-heading text-brand-gold mb-6 block">Conecta</h4>
             <div className="flex gap-4">
-              <a href="#" aria-label="Seguir a Irina en Instagram" className="w-10 h-10 border border-brand-cream/15 flex items-center justify-center hover:bg-brand-cream hover:text-brand-ink transition-all duration-300 rounded-full text-brand-cream/55">
+              <a href="https://www.instagram.com/irinalopez?igsh=MW92eGg3eXBhamc2Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Seguir a Irina en Instagram" className="w-10 h-10 border border-brand-cream/15 flex items-center justify-center hover:bg-brand-cream hover:text-brand-ink transition-all duration-300 rounded-full text-brand-cream/55">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               </a>
-              <a href="#" aria-label="Conectar con Irina en LinkedIn" className="w-10 h-10 border border-brand-cream/15 flex items-center justify-center hover:bg-brand-cream hover:text-brand-ink transition-all duration-300 rounded-full text-brand-cream/55">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="#" aria-label="Ver a Irina en TikTok" className="w-10 h-10 border border-brand-cream/15 flex items-center justify-center hover:bg-brand-cream hover:text-brand-ink transition-all duration-300 rounded-full text-brand-cream/55">
+              <a href="https://www.tiktok.com/@ilopezmacias?_r=1&_t=ZS-962VTl6v9Ue" target="_blank" rel="noopener noreferrer" aria-label="Ver a Irina en TikTok" className="w-10 h-10 border border-brand-cream/15 flex items-center justify-center hover:bg-brand-cream hover:text-brand-ink transition-all duration-300 rounded-full text-brand-cream/55">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
               </a>
             </div>
