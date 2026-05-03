@@ -24,7 +24,7 @@ function HomePage() {
       <About />
       <ParallaxBreak
         image="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop"
-        height="h-[90vh]"
+        height="h-[50vh] lg:h-[90vh]"
         tint="bg-brand-gold/20"
       />
       <Services />
@@ -32,7 +32,7 @@ function HomePage() {
       <LeadMagnet />
       <ParallaxBreak
         image="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2670&auto=format&fit=crop"
-        height="h-[90vh]"
+        height="h-[50vh] lg:h-[90vh]"
         tint="bg-brand-terracotta/20"
       />
       <BlogPreview />
