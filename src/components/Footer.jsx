@@ -52,7 +52,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Irina Lopez. Todos los derechos reservados.
           </p>
           <p className="text-brand-cream/35 text-[10px] uppercase tracking-widest text-center md:text-right font-heading">
-            Diseño web con <span className="text-brand-terracotta">&hearts;</span>
+            Diseñado con ❤️
           </p>
         </div>
       </div>
