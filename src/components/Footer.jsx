@@ -48,10 +48,10 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-brand-cream/8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-brand-cream/35 text-[10px] uppercase tracking-widest text-center md:text-left font-heading">
+          <p className="text-brand-cream/60 text-[10px] uppercase tracking-widest text-center md:text-left font-heading">
             &copy; {new Date().getFullYear()} Irina Lopez. Todos los derechos reservados.
           </p>
-          <p className="text-brand-cream/35 text-[10px] uppercase tracking-widest text-center md:text-right font-heading">
+          <p className="text-brand-cream/60 text-[10px] uppercase tracking-widest text-center md:text-right font-heading">
             Diseñado con <span style={{ color: '#aaff00' }}>♥</span> por{' '}
             <a
               href="https://portfolioapp-sigma-olive.vercel.app/"
