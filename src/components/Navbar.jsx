@@ -1,10 +1,20 @@
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import logoColor from '../assets/logos/logo-color.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const handleSection = (e, id) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed w-full z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-sand/40">
@@ -16,11 +26,11 @@ export default function Navbar() {
             </a>
           </div>
           <div className="hidden lg:flex space-x-8 items-center">
-            <a href="/#sobre-mi" className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Sobre Mí</a>
-            <a href="/#servicios" className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Servicios</a>
-            <a href="/#tienda" className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Tienda</a>
-            <a href="/#blog" className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Blog</a>
-            <a href="/#lead-magnet" className="btn-primary !py-2.5 !px-6 !text-xs">Recursos →</a>
+            <a href="/#sobre-mi" onClick={(e) => handleSection(e, 'sobre-mi')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Sobre Mí</a>
+            <a href="/#servicios" onClick={(e) => handleSection(e, 'servicios')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Servicios</a>
+            <a href="/#tienda" onClick={(e) => handleSection(e, 'tienda')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Tienda</a>
+            <a href="/#blog" onClick={(e) => handleSection(e, 'blog')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Blog</a>
+            <a href="/#lead-magnet" onClick={(e) => handleSection(e, 'lead-magnet')} className="btn-primary !py-2.5 !px-6 !text-xs">Recursos →</a>
           </div>
           <div className="lg:hidden">
             <button
@@ -42,11 +52,11 @@ export default function Navbar() {
           className="lg:hidden bg-brand-cream shadow-lg border-b border-brand-sand/40"
         >
           <div className="px-4 pt-4 pb-8 space-y-6 flex flex-col items-center">
-            <a href="/#sobre-mi" onClick={() => setIsOpen(false)} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Sobre Mí</a>
-            <a href="/#servicios" onClick={() => setIsOpen(false)} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Servicios</a>
-            <a href="/#tienda" onClick={() => setIsOpen(false)} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Tienda</a>
-            <a href="/#blog" onClick={() => setIsOpen(false)} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Blog</a>
-            <a href="/#lead-magnet" onClick={() => setIsOpen(false)} className="btn-primary">Recursos →</a>
+            <a href="/#sobre-mi" onClick={(e) => handleSection(e, 'sobre-mi')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Sobre Mí</a>
+            <a href="/#servicios" onClick={(e) => handleSection(e, 'servicios')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Servicios</a>
+            <a href="/#tienda" onClick={(e) => handleSection(e, 'tienda')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Tienda</a>
+            <a href="/#blog" onClick={(e) => handleSection(e, 'blog')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Blog</a>
+            <a href="/#lead-magnet" onClick={(e) => handleSection(e, 'lead-magnet')} className="btn-primary">Recursos →</a>
           </div>
         </motion.div>
       )}

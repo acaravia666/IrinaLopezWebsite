@@ -10,6 +10,7 @@ import BlogPreview from './components/BlogPreview';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import ParallaxBreak from './components/ParallaxBreak';
+import ScrollToTop from './components/ScrollToTop';
 
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const ArticlePage = lazy(() => import('./pages/ArticlePage'));
@@ -44,6 +45,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Suspense fallback={<div className="min-h-screen bg-brand-cream" />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
