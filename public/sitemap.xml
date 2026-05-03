@@ -5,46 +5,118 @@
   <!-- Página principal -->
   <url>
     <loc>https://irinalopez.ec/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-EC" href="https://irinalopez.ec/" />
   </url>
 
-  <!-- Secciones de la SPA (deep links para Google) -->
+  <!-- Secciones SPA -->
   <url>
     <loc>https://irinalopez.ec/#sobre-mi</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://irinalopez.ec/#servicios</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://irinalopez.ec/#tienda</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog index -->
   <url>
-    <loc>https://irinalopez.ec/#blog</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://irinalopez.ec/blog</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
+  <!-- Artículos individuales -->
   <url>
-    <loc>https://irinalopez.ec/#newsletter</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://irinalopez.ec/blog/correo-no-suficiente-proteger-proyecto</loc>
+    <lastmod>2025-03-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/cultura-ecuador-institucionalidad</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/arte-de-valorarse</loc>
+    <lastmod>2025-02-12</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/musica-como-resistencia</loc>
+    <lastmod>2025-02-03</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/mercados-musicales-talento-local</loc>
+    <lastmod>2025-01-28</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/red-con-nombre-de-mujer</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/derecho-ser-dueno-tu-obra</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/ecuador-festivales-gratuitos</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/politicas-publicas-sector-cultural</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/voces-shalom-mendieta</loc>
+    <lastmod>2024-10-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/voces-jorge-palacios</loc>
+    <lastmod>2024-10-08</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/voces-explorarte-murales</loc>
+    <lastmod>2024-09-20</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://irinalopez.ec/blog/mon-laferte-red-de-apoyo</loc>
+    <lastmod>2024-09-05</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

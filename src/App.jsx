@@ -13,6 +13,7 @@ import ParallaxBreak from './components/ParallaxBreak';
 
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const ArticlePage = lazy(() => import('./pages/ArticlePage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function HomePage() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<ArticlePage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
