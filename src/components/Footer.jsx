@@ -57,7 +57,7 @@ export default function Footer() {
               href="https://portfolioapp-sigma-olive.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#aaff00] hover:opacity-80 transition-opacity"
+              className="text-[#aaff00] hover:opacity-80 transition-opacity normal-case"
             >
               Hex.vIA.sys[06]
             </a>
