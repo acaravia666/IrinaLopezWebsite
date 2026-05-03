@@ -41,7 +41,7 @@ export default function Store() {
           <div ref={imageRef} className="md:w-2/5 aspect-[4/3] md:aspect-auto bg-brand-sand overflow-hidden relative flex-shrink-0">
             <motion.img
               style={{ y, scale: 1.25 }}
-              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2574&auto=format&fit=crop"
+              src="/guia-recurso.webp"
               alt="Guía práctica para aplicar a fondos concursables"
               className="w-full h-full object-cover brightness-95"
             />

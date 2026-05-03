@@ -31,8 +31,8 @@ export default function LeadMagnet() {
             >
               <div className="aspect-[3/4] bg-brand-sand relative shadow-lg -rotate-2 hover:rotate-0 transition-transform duration-500 rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-                  alt="Portada de la Guía Legal Imprescindible"
+                  src="/guia-recurso.webp"
+                  alt="Portada de la Guía práctica para aplicar a fondos concursables"
                   className="w-full h-full object-cover brightness-95"
                 />
                 <div className="absolute inset-0 border border-brand-gold/40 m-4 rounded-lg pointer-events-none" />
