@@ -32,9 +32,9 @@ export default function About() {
             >
               <motion.img
                 style={{ y: imageY, scale: 1.25 }}
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2576&auto=format&fit=crop"
-                alt="Irina Lopez"
-                className="w-full h-full object-cover grayscale-[8%] brightness-95"
+                src="/irina-about.webp"
+                alt="Irina López — Abogada y Licenciada en Música"
+                className="w-full h-full object-cover object-top"
               />
             </motion.div>
           </div>
