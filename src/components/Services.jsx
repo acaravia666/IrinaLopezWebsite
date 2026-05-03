@@ -1,39 +1,89 @@
 import { motion } from 'framer-motion';
 
+const WA_NUMBER = '593995590893';
+const waUrl = (text) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+
 const services = [
   {
     id: 1,
     number: '01',
-    title: 'Derechos de Autor & SENADI',
-    description: 'Protección legal para artistas, fotógrafos y músicos ante el SENADI. Aseguramos que tu obra intelectual esté blindada contra plagios.',
+    title: 'Contratos Artísticos',
+    description: 'Contratos claros y sólidos para proteger tu trabajo creativo. Acuerdos de colaboración, cesión de derechos, licencias y más — en lenguaje humano.',
+    waMessage: 'Hola Irina, me interesa una asesoría sobre contratos artísticos. ¿Podemos coordinar una sesión?',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
       </svg>
     ),
   },
   {
     id: 2,
     number: '02',
-    title: 'Registro de Marcas',
-    description: 'Gestión completa del registro de tu marca en Ecuador. Transformamos tu identidad creativa en un activo legalmente protegido.',
+    title: 'Propiedad Intelectual',
+    description: 'Registro y protección de tus obras ante el SENADI. Derechos de autor, marcas y patentes para que nadie se apropie de lo que creaste.',
+    waMessage: 'Hola Irina, me interesa una asesoría sobre propiedad intelectual y registro de obras. ¿Podemos coordinar una sesión?',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M14.83 14.83a4 4 0 1 1 0-5.66"/>
       </svg>
     ),
   },
   {
     id: 3,
     number: '03',
-    title: 'Legal Design & Contratos',
-    description: 'Contratos claros, sin laberintos legales. Diseñados para proteger tus negocios creativos con un lenguaje humano y profesional.',
+    title: 'Fondos Concursables',
+    description: 'Acompañamiento en la postulación a fondos públicos y privados para proyectos culturales. Maximizamos tus posibilidades de financiamiento.',
+    waMessage: 'Hola Irina, me interesa una asesoría sobre fondos concursables para mi proyecto cultural. ¿Podemos coordinar una sesión?',
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="12" y1="1" x2="12" y2="23"/>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      </svg>
+    ),
+  },
+  {
+    id: 4,
+    number: '04',
+    title: 'Producción de Eventos',
+    description: 'Marco legal para conciertos, festivales y eventos culturales. Permisos, contratos con proveedores y gestión de responsabilidades.',
+    waMessage: 'Hola Irina, me interesa una asesoría legal para producción de eventos. ¿Podemos coordinar una sesión?',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 18V5l12-2v13"/>
+        <circle cx="6" cy="18" r="3"/>
+        <circle cx="18" cy="16" r="3"/>
+      </svg>
+    ),
+  },
+  {
+    id: 5,
+    number: '05',
+    title: 'Facturación y Beneficios Tributarios',
+    description: 'Optimización fiscal para creadores y artistas. Te guiamos en facturación, deducciones y los beneficios tributarios a los que tienes derecho.',
+    waMessage: 'Hola Irina, me interesa una asesoría sobre facturación y beneficios tributarios para artistas. ¿Podemos coordinar una sesión?',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="2"/>
+        <line x1="2" y1="10" x2="22" y2="10"/>
+      </svg>
+    ),
+  },
+  {
+    id: 6,
+    number: '06',
+    title: 'Registro RUC y RUAC',
+    description: 'Formaliza tu actividad artística con el RUC y el Registro Único de Artistas y Gestores Culturales (RUAC). Primer paso para operar legalmente.',
+    waMessage: 'Hola Irina, me interesa una asesoría para el registro RUC y RUAC. ¿Podemos coordinar una sesión?',
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <polyline points="16 11 18 13 22 9"/>
       </svg>
     ),
   },
@@ -65,10 +115,6 @@ const consultations = [
 ];
 
 export default function Services() {
-  const scrollToConsult = (e) => {
-    e.preventDefault();
-    document.getElementById('asesoria')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section id="servicios" className="py-24 md:py-32 bg-brand-cream">
@@ -108,48 +154,53 @@ export default function Services() {
         </div>
 
         {/* Service cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.6 }}
-              className="group flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="group flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 bg-white"
             >
-              {/* Gold accent bar */}
-              <div className="h-1 bg-gradient-to-r from-brand-gold via-brand-gold/70 to-transparent" />
-
-              <div className="bg-white p-10 flex flex-col flex-grow relative">
+              <div className="relative p-7 flex flex-col flex-grow overflow-hidden">
                 {/* Watermark number */}
                 <span
                   aria-hidden="true"
-                  className="absolute -bottom-6 -right-2 font-display text-[8rem] leading-none font-bold text-brand-ink/[0.04] group-hover:text-brand-gold/10 transition-colors duration-500 select-none pointer-events-none"
+                  className="absolute -bottom-4 -right-1 font-display font-black leading-none text-[6rem] text-brand-ink/[0.05] select-none pointer-events-none"
                 >
                   {service.number}
                 </span>
 
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-2xl bg-brand-gold/10 group-hover:bg-brand-gold/20 transition-colors duration-300 flex items-center justify-center text-brand-gold mb-8 flex-shrink-0">
-                  {service.icon}
-                </div>
+                <span className="text-[9px] uppercase tracking-[0.35em] font-semibold font-heading text-brand-ink/30 mb-4 block">
+                  {service.number}
+                </span>
 
-                <h3 className="font-display font-bold text-brand-ink text-xl mb-4 leading-snug">
-                  {service.title}
-                </h3>
-                <p className="text-brand-ink/60 font-body text-sm leading-relaxed flex-grow">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-brand-gold/10 group-hover:bg-brand-gold/20 transition-colors duration-300 flex items-center justify-center text-brand-terracotta group-hover:text-brand-gold flex-shrink-0 mt-0.5">
+                    {service.icon}
+                  </div>
+                  <h3 className="font-display font-bold text-brand-ink text-lg leading-snug">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-brand-ink/55 font-body text-sm leading-relaxed flex-grow">
                   {service.description}
                 </p>
 
-                <div className="mt-8 pt-6 border-t border-brand-sand/50">
+                <div className="mt-5 pt-4 border-t border-brand-sand/40">
                   <a
-                    href="#asesoria"
-                    onClick={scrollToConsult}
-                    className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-semibold font-heading text-brand-terracotta hover:text-brand-gold transition-colors duration-300 focus:outline-none"
+                    href={waUrl(service.waMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[9px] uppercase tracking-[0.3em] font-semibold font-heading text-brand-terracotta hover:text-brand-gold transition-colors duration-300 focus:outline-none"
                   >
-                    Agendar asesoría
-                    <span className="text-base leading-none group-hover:translate-x-1 transition-transform inline-block">→</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.849L.057 23.552a.5.5 0 0 0 .61.61l5.703-1.471A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.802 9.802 0 0 1-5.006-1.374l-.36-.214-3.733.963.99-3.632-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
+                    </svg>
+                    Consultar por WhatsApp
                   </a>
                 </div>
               </div>
@@ -223,6 +274,14 @@ export default function Services() {
                   }`}>
                     Reservar
                     <span className="group-hover:translate-x-0.5 transition-transform inline-block">→</span>
+                  </span>
+                  <span className={`inline-flex items-center justify-center gap-1 text-[9px] tracking-wider font-heading font-medium mt-2 w-full ${slot.featured ? 'text-brand-cream/60' : 'text-brand-ink/50'}`}>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                    vía Hotmart
                   </span>
                 </div>
               </motion.a>
