@@ -52,7 +52,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Irina Lopez. Todos los derechos reservados.
           </p>
           <p className="text-brand-cream/35 text-[10px] uppercase tracking-widest text-center md:text-right font-heading">
-            Diseñado con ❤️ por{' '}
+            Diseñado con <span style={{ color: '#aaff00' }}>♥</span> por{' '}
             <a
               href="https://portfolioapp-sigma-olive.vercel.app/"
               target="_blank"
