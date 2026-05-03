@@ -37,7 +37,7 @@ Proteger nuestro trabajo es la única forma de profesionalizar la cultura y evit
     excerpt: '¿Puede funcionar la cultura de un país sin un ministerio independiente que la rija? La pregunta que muchos nos hacemos tras la fusión del Ministerio de Cultura.',
     category: 'Cultura & Política',
     date: '25 Feb, 2025',
-    image: 'https://images.unsplash.com/photo-1505664194779-8beaceb5bb4b?q=80&w=2670&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=2670&auto=format&fit=crop',
     content: `¿Puede funcionar la cultura de un país sin un ministerio independiente que la rija? Esta es la pregunta que muchos nos hacemos tras la fusión del Ministerio de Cultura con las carteras de Educación y Deporte, ahora bajo la dirección de Gilda Alcívar.
 
 Para el sector artístico, esta noticia cayó como un balde de agua fría. La institucionalidad no es un capricho burocrático; es la garantía de que un sector históricamente precarizado tenga políticas especializadas y "orden en la casa". Sin embargo, ya en este escenario, el verdadero reto es identificar cómo podemos transformar lo que muchos consideran una catástrofe en una oportunidad estratégica.
