@@ -29,13 +29,16 @@ export default function LeadMagnet() {
               viewport={{ once: true }}
               className="w-full lg:w-5/12"
             >
-              <div className="aspect-[3/4] bg-brand-sand relative shadow-lg -rotate-2 hover:rotate-0 transition-transform duration-500 rounded-xl overflow-hidden">
+              <div
+                className="-rotate-2 hover:rotate-0 transition-transform duration-500 relative"
+                style={{ filter: 'drop-shadow(0 20px 40px rgba(40,30,18,0.22))' }}
+              >
                 <img
                   src="/guia-recurso.webp"
-                  alt="Portada de la Guía práctica para aplicar a fondos concursables"
-                  className="w-full h-full object-cover brightness-95"
+                  alt="Portada de la Guía práctica para formalizar tu carrera artística en Ecuador"
+                  className="w-full h-auto rounded-xl"
                 />
-                <div className="absolute inset-0 border border-brand-gold/40 m-4 rounded-lg pointer-events-none" />
+                <div className="absolute inset-0 border border-brand-gold/30 rounded-xl pointer-events-none" />
               </div>
             </motion.div>
 
@@ -53,13 +56,13 @@ export default function LeadMagnet() {
                 className="font-display font-black text-brand-ink leading-tight tracking-tight mb-6"
                 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
               >
-                Guía para aplicar a{' '}
+                Formaliza tu{' '}
                 <span className="font-script text-brand-gold block" style={{ fontSize: '1.2em', lineHeight: 0.95 }}>
-                  fondos concursables
+                  carrera artística
                 </span>
               </h2>
               <p className="text-brand-ink/70 font-body text-lg mb-8 max-w-lg leading-relaxed">
-                Una guía práctica y gratuita con todo lo que necesitas para presentar una solicitud sólida: requisitos, errores comunes y los pasos que marcan la diferencia.
+                Una guía práctica y gratuita para establecer tu carrera artística en Ecuador con bases legales sólidas. Deja tus datos y recíbela al instante.
               </p>
 
               {submitted ? (
