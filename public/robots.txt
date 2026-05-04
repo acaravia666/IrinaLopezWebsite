@@ -1,8 +1,13 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://irinalopez.ec/sitemap.xml
+User-agent: facebookexternalhit
+Allow: /
 
-# Crawl-delay (optional, for polite crawling)
-Crawl-delay: 1
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+Sitemap: https://irinalopez.com/sitemap.xml
