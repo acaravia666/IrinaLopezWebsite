@@ -19,7 +19,7 @@ export default function Hero() {
         <img
           src="/irina-hero.webp"
           alt=""
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-top scale-x-[-1]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-terracotta via-brand-terracotta/75 to-brand-terracotta/40" />
       </div>
@@ -27,7 +27,7 @@ export default function Hero() {
       {/* ── LEFT: text column ── */}
       <motion.div
         style={{ opacity: fadeOut }}
-        className="relative z-20 w-full lg:w-[58%] flex flex-col justify-center min-h-screen px-6 sm:px-10 lg:px-16 xl:px-24 pt-32 pb-40 lg:py-32"
+        className="relative z-20 w-full lg:w-[48%] flex flex-col justify-center min-h-screen px-6 sm:px-10 lg:px-16 xl:px-24 pt-32 pb-40 lg:py-32"
       >
         {/* Eyebrow */}
         <motion.div
@@ -95,10 +95,11 @@ export default function Hero() {
           style={{ y: photoY }}
           src="/irina-hero.webp"
           alt="Irina López"
-          className="w-full h-[110%] -mt-[5%] object-cover object-top"
+          className="w-full h-[110%] -mt-[5%] object-cover scale-x-[-1]"
+          style={{ objectPosition: '100% top' }}
         />
         {/* blend left edge into terracotta */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-terracotta via-brand-terracotta/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-terracotta from-0% via-brand-terracotta/15 via-30% to-transparent" />
         {/* bottom vignette for wave transition */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-brand-terracotta/50 to-transparent" />
       </div>

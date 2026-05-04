@@ -33,7 +33,7 @@ function HomePage() {
       <Store />
       <LeadMagnet />
       <ParallaxBreak
-        image="/IMG_2645.webp"
+        image="/ParallaxBreak2.webp"
         height="h-[50vh] lg:h-[90vh]"
         tint="bg-brand-terracotta/20"
       />
