@@ -25,10 +25,11 @@ export default function Navbar() {
               <img src={logoColor} alt="Irina López – Abogada & Licenciada en Música" className="h-[72px] w-auto" />
             </a>
           </div>
-          <div className="hidden lg:flex space-x-8 items-center">
+          <div className="hidden lg:flex space-x-6 items-center">
             <a href="/#sobre-mi" onClick={(e) => handleSection(e, 'sobre-mi')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Sobre Mí</a>
             <a href="/#servicios" onClick={(e) => handleSection(e, 'servicios')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Servicios</a>
             <a href="/#tienda" onClick={(e) => handleSection(e, 'tienda')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Tienda</a>
+            <a href="/#lanzamientos" onClick={(e) => handleSection(e, 'lanzamientos')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Lanzamientos</a>
             <a href="/#blog" onClick={(e) => handleSection(e, 'blog')} className="text-brand-ink hover:text-brand-terracotta transition-colors duration-300 text-sm font-heading tracking-wide">Blog</a>
             <a href="/#lead-magnet" onClick={(e) => handleSection(e, 'lead-magnet')} className="btn-primary !py-2.5 !px-6 !text-xs">Recursos →</a>
           </div>
@@ -55,6 +56,7 @@ export default function Navbar() {
             <a href="/#sobre-mi" onClick={(e) => handleSection(e, 'sobre-mi')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Sobre Mí</a>
             <a href="/#servicios" onClick={(e) => handleSection(e, 'servicios')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Servicios</a>
             <a href="/#tienda" onClick={(e) => handleSection(e, 'tienda')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Tienda</a>
+            <a href="/#lanzamientos" onClick={(e) => handleSection(e, 'lanzamientos')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Lanzamientos</a>
             <a href="/#blog" onClick={(e) => handleSection(e, 'blog')} className="text-brand-ink hover:text-brand-terracotta font-heading tracking-wide text-lg transition-colors">Blog</a>
             <a href="/#lead-magnet" onClick={(e) => handleSection(e, 'lead-magnet')} className="btn-primary">Recursos →</a>
           </div>

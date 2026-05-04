@@ -22,6 +22,49 @@ export default function Lanzamientos() {
           </h2>
         </div>
 
+        {/* Social follow prompt */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-2xl px-8 py-7 mb-10 overflow-hidden relative"
+          style={{ background: 'linear-gradient(135deg, #c8703a 0%, #b8972a 60%, #e8a040 100%)' }}
+        >
+          {/* Decorative orb */}
+          <div className="absolute -top-10 -right-10 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
+
+          <p className="font-body text-white text-base leading-relaxed text-center sm:text-left relative z-10 drop-shadow-sm">
+            ¿No quieres perderte el próximo lanzamiento?{' '}
+            <span className="font-semibold">Sígueme en Instagram y TikTok</span>{' '}
+            — ahí anuncio todo primero.
+          </p>
+          <div className="flex gap-3 flex-shrink-0 relative z-10">
+            <a
+              href="https://www.instagram.com/irinalopez?igsh=MW92eGg3eXBhamc2Mg%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white text-brand-terracotta px-5 py-2.5 rounded-full text-sm font-semibold font-heading hover:bg-brand-cream transition-colors duration-200 shadow-md"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+              </svg>
+              Instagram
+            </a>
+            <a
+              href="https://www.tiktok.com/@ilopezmacias?_r=1&_t=ZS-962VTl6v9Ue"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white text-brand-terracotta px-5 py-2.5 rounded-full text-sm font-semibold font-heading hover:bg-brand-cream transition-colors duration-200 shadow-md"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.78a4.85 4.85 0 0 1-1.01-.09z"/>
+              </svg>
+              TikTok
+            </a>
+          </div>
+        </motion.div>
+
         {/* Masterclass card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
