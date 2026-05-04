@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   try {
     // Email a Irina — crítico
     const r1 = await resend.emails.send({
-      from: 'Irina López Web <onboarding@resend.dev>',
+      from: 'Irina López Web <hola@irinalopez.com>',
       to: process.env.RESEND_TO,
       reply_to: email,
       subject: `📥 Nueva descarga de guía — ${name}`,
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
   // Email de confirmación al usuario — no crítico, falla silenciosamente
   try {
     const r2 = await resend.emails.send({
-      from: 'Irina López <onboarding@resend.dev>',
+      from: 'Irina López <hola@irinalopez.com>',
       to: email,
       subject: '¡Tu guía está en camino! 🎉',
       html: `
