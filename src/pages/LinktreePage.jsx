@@ -90,11 +90,12 @@ export default function LinktreePage() {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center mb-8"
         >
-          <div className="w-24 h-24 rounded-full overflow-hidden mb-4 ring-4 ring-white/30 shadow-xl">
+          <div className="w-24 h-24 rounded-full overflow-hidden mb-4 ring-4 ring-white/30 shadow-xl relative">
             <img
               src="/3.webp"
               alt="Irina López"
-              className="w-full h-full object-cover object-top scale-x-[-1]"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: '68% 10%', transform: 'scale(1.6)', transformOrigin: '68% 10%' }}
             />
           </div>
           <h1 className="font-display font-black text-white text-2xl tracking-tight">Irina López</h1>
