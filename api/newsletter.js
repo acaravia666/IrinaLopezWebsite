@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   if (!name || !email) return res.status(400).json({ error: 'Faltan campos' });
 
   try {
-    // Email a Irina
+    // Email a Irina — crítico
     const r1 = await resend.emails.send({
       from: 'Irina López Web <onboarding@resend.dev>',
       to: process.env.RESEND_TO,
@@ -34,8 +34,13 @@ export default async function handler(req, res) {
       `,
     });
     console.log('Email a Irina:', JSON.stringify(r1));
+  } catch (err) {
+    console.error('Error enviando a Irina:', err);
+    return res.status(500).json({ error: 'Error al enviar el email' });
+  }
 
-    // Email de confirmación al usuario
+  // Email de confirmación al usuario — no crítico, falla silenciosamente
+  try {
     const r2 = await resend.emails.send({
       from: 'Irina López <onboarding@resend.dev>',
       to: email,
@@ -50,18 +55,17 @@ export default async function handler(req, res) {
               Ya eres parte de <strong>Charlas de Domingo</strong>. Cada semana te llega una reflexión, inspiración y algún tip útil — sin jerga legal aburrida, prometido.
             </p>
             <p style="margin: 0 0 32px; font-size: 16px; line-height: 1.6; color: #7a6a55;">
-              Nos vemos el próximo domingo. Si tienes alguna duda mientras tanto, responde este email y con gusto te ayudo.
+              Nos vemos el próximo domingo. Si tienes alguna duda, responde este email y con gusto te ayudo.
             </p>
-            <p style="margin: 0; font-size: 15px; color: #1a1208;">Un abrazo,<br/><strong>Irina López</strong><br/><span style="color: #7a6a55; font-size: 13px;">Abogada · Gestora Cultural · Licenciada en Música</span></p>
+            <p style="margin: 0; font-size: 15px;">Un abrazo,<br/><strong>Irina López</strong><br/><span style="color: #7a6a55; font-size: 13px;">Abogada · Gestora Cultural · Licenciada en Música</span></p>
           </div>
         </div>
       `,
     });
     console.log('Email al usuario:', JSON.stringify(r2));
-
-    return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error('Error Resend:', err);
-    return res.status(500).json({ error: 'Error al enviar el email' });
+    console.warn('Email de confirmación no enviado (dominio no verificado):', err?.message);
   }
+
+  return res.status(200).json({ ok: true });
 }
