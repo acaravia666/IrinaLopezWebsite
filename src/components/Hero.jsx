@@ -72,9 +72,7 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-brand-cream/75 font-body text-lg sm:text-xl font-light tracking-wide mt-8 mb-10 max-w-md leading-relaxed"
           >
-            Blindamos tu{' '}
-            <span className="text-brand-gold font-semibold">creatividad</span>{' '}
-            con el rigor legal que tu talento merece en Ecuador.
+            Te acompaño a profesionalizar tu trabajo creativo.
           </motion.p>
 
           <motion.div
