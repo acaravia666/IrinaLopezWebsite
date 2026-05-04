@@ -23,15 +23,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-[10px] uppercase tracking-[0.25em] font-semibold font-heading text-brand-gold mb-6 block">Legal</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-brand-cream/55 hover:text-brand-cream transition-colors text-sm font-body tracking-wide">Aviso Legal</a></li>
-              <li><a href="#" className="text-brand-cream/55 hover:text-brand-cream transition-colors text-sm font-body tracking-wide">Política de Privacidad</a></li>
-              <li><a href="#" className="text-brand-cream/55 hover:text-brand-cream transition-colors text-sm font-body tracking-wide">Términos y Condiciones</a></li>
-              <li><a href="#" className="text-brand-cream/55 hover:text-brand-cream transition-colors text-sm font-body tracking-wide">Política de Cookies</a></li>
-            </ul>
-          </div>
 
           <div>
             <h4 className="text-[10px] uppercase tracking-[0.25em] font-semibold font-heading text-brand-gold mb-6 block">Conecta</h4>
