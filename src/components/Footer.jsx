@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="pt-20 pb-10 bg-brand-ink border-t border-brand-cream/8 text-brand-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
 
-          <div className="md:col-span-1">
+          <div>
             <img src={logoLight} alt="Irina López – Abogada & Licenciada en Música" className="h-16 w-auto mb-6" />
             <p className="text-brand-cream/45 text-sm font-body leading-relaxed max-w-xs">
               Abogada especializada en propiedad intelectual y creadora de contenido.
