@@ -52,7 +52,7 @@ export default function LinktreePage() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/newsletter', {
+      const res = await fetch('/api/fondos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email }),
@@ -92,7 +92,7 @@ export default function LinktreePage() {
         >
           <div className="w-24 h-24 rounded-full overflow-hidden mb-4 ring-4 ring-white/30 shadow-xl">
             <img
-              src="/irina-hero.webp"
+              src="/3.webp"
               alt="Irina López"
               className="w-full h-full object-cover object-top scale-x-[-1]"
             />
@@ -169,15 +169,12 @@ export default function LinktreePage() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="bg-brand-ink/80 backdrop-blur-sm rounded-2xl p-6"
         >
-          <div className="flex items-center gap-2 mb-1">
-            <StarIcon /><StarIcon /><StarIcon />
-          </div>
-          <h2 className="font-display font-black text-brand-cream text-xl mb-1">
-            Charlas{' '}
-            <span className="font-script text-brand-gold" style={{ fontSize: '1.15em', lineHeight: 0.9 }}>de domingo.</span>
+          <h2 className="font-display font-black text-brand-cream text-xl mb-2">
+            Fondos{' '}
+            <span className="font-script text-brand-gold" style={{ fontSize: '1.15em', lineHeight: 0.9 }}>Concursables</span>
           </h2>
-          <p className="text-brand-cream/60 text-sm font-body mb-5 leading-relaxed">
-            Reflexiones, inspiración y tips útiles — sin jerga legal aburrida.
+          <p className="text-brand-cream/65 text-sm font-body mb-5 leading-relaxed">
+            Suscríbete y recibe cada mes un boletín con las convocatorias de fondos nacionales e internacionales vigentes para artistas y proyectos culturales.
           </p>
 
           {submitted ? (
@@ -207,7 +204,7 @@ export default function LinktreePage() {
                 disabled={loading}
                 className="w-full bg-brand-gold hover:bg-brand-terracotta text-white font-heading font-semibold text-sm py-3 rounded-xl transition-colors duration-200 disabled:opacity-60"
               >
-                {loading ? 'Enviando…' : 'Suscribirme →'}
+                {loading ? 'Enviando…' : 'Quiero recibir las convocatorias →'}
               </button>
               {error && <p className="text-brand-gold/80 text-xs text-center">{error}</p>}
             </form>

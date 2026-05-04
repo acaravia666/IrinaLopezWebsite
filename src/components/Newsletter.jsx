@@ -13,7 +13,7 @@ export default function Newsletter() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/newsletter', {
+      const res = await fetch('/api/fondos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email }),
@@ -44,24 +44,24 @@ export default function Newsletter() {
           viewport={{ once: true }}
         >
           <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] font-semibold font-heading mb-8 block">
-            Newsletter semanal
+            Boletín mensual
           </p>
 
           <h2
             className="font-display font-black text-brand-cream leading-none tracking-tight mb-2"
             style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)' }}
           >
-            Charlas
+            Fondos
           </h2>
           <span
             className="font-script text-brand-sand block mb-8"
             style={{ fontSize: 'clamp(2.5rem, 7vw, 4.5rem)', lineHeight: 1.05 }}
           >
-            de domingo.
+            Concursables.
           </span>
 
           <p className="text-brand-cream/55 font-body text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-            Sin jerga legal aburrida. Solo reflexiones, inspiración y uno que otro tip útil directo a tu bandeja de entrada. Únete a mi newsletter semanal.
+            Cada mes te llega un boletín con las convocatorias de fondos nacionales e internacionales vigentes para artistas y proyectos culturales. Sin filtros, directo a tu bandeja.
           </p>
 
           {submitted ? (
@@ -70,7 +70,7 @@ export default function Newsletter() {
               animate={{ opacity: 1, y: 0 }}
               className="text-brand-gold text-lg font-body tracking-wide"
             >
-              ¡Gracias por suscribirte! Nos vemos el próximo domingo.
+              ¡Listo! Pronto recibirás las próximas convocatorias.
             </motion.p>
           ) : (
             <form
@@ -104,7 +104,7 @@ export default function Newsletter() {
                 </div>
               </div>
               <button type="submit" disabled={loading} className="btn-primary shrink-0 mx-auto disabled:opacity-60">
-                {loading ? 'Enviando…' : 'Inscribirme →'}
+                {loading ? 'Enviando…' : 'Quiero recibir las convocatorias →'}
               </button>
               {error && <p className="text-brand-gold/80 text-sm mt-2">{error}</p>}
             </form>
