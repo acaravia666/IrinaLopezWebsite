@@ -2,13 +2,31 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function Newsletter() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setEmail('');
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email }),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+      setName('');
+      setEmail('');
+    } catch {
+      setError('Hubo un problema. Por favor intenta de nuevo.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -56,22 +74,39 @@ export default function Newsletter() {
             </motion.p>
           ) : (
             <form
-              className="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center"
+              className="max-w-xl mx-auto flex flex-col gap-4 justify-center"
               onSubmit={handleSubmit}
             >
-              <label htmlFor="newsletter-email" className="sr-only">Tu dirección de email</label>
-              <input
-                id="newsletter-email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Tu dirección de email"
-                className="flex-grow bg-brand-cream/8 border border-brand-cream/20 py-4 px-6 rounded-full focus:outline-none focus:border-brand-gold transition-colors placeholder:text-brand-cream/40 font-body text-brand-cream text-center sm:text-left"
-                required
-              />
-              <button type="submit" className="btn-primary shrink-0">
-                Inscribirme →
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex-1">
+                  <label htmlFor="newsletter-name" className="sr-only">Tu nombre</label>
+                  <input
+                    id="newsletter-name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Tu nombre"
+                    className="w-full bg-brand-cream/8 border border-brand-cream/20 py-4 px-6 rounded-full focus:outline-none focus:border-brand-gold transition-colors placeholder:text-brand-cream/40 font-body text-brand-cream text-center sm:text-left"
+                    required
+                  />
+                </div>
+                <div className="flex-1">
+                  <label htmlFor="newsletter-email" className="sr-only">Tu dirección de email</label>
+                  <input
+                    id="newsletter-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Tu email"
+                    className="w-full bg-brand-cream/8 border border-brand-cream/20 py-4 px-6 rounded-full focus:outline-none focus:border-brand-gold transition-colors placeholder:text-brand-cream/40 font-body text-brand-cream text-center sm:text-left"
+                    required
+                  />
+                </div>
+              </div>
+              <button type="submit" disabled={loading} className="btn-primary shrink-0 mx-auto disabled:opacity-60">
+                {loading ? 'Enviando…' : 'Inscribirme →'}
               </button>
+              {error && <p className="text-brand-gold/80 text-sm mt-2">{error}</p>}
             </form>
           )}
         </motion.div>

@@ -82,10 +82,10 @@ export default function About() {
               className="space-y-6 text-brand-ink/70 font-body text-lg leading-relaxed"
             >
               <p>
-                Soy abogada de profesión en Ecuador, pero mi corazón late al ritmo del arte y la música. Ayudo a creativos a proteger sus ideas, asegurarme de que sus marcas estén registradas ante el SENADI y que sus negocios sean sólidos, mientras comparto mi propia faceta artística con el mundo.
+                Soy Irina López, abogada, gestora cultural y licenciada en música. Trabajo en la democratización de la información para artistas, ayudándoles a formalizar su práctica y acceder a oportunidades de financiamiento.
               </p>
               <p>
-                Creo en la dualidad. No tienes que elegir entre ser estructurado y profesional o ser libre y creativo. Aquí, los contratos se diseñan con la misma pasión con la que se compone una melodía; con claridad, armonía y protección total.
+                En los últimos cinco años he acompañado a más de 300 artistas y he impulsado proyectos tales como el festival Párame Bola Fest y colaborado con plataformas regionales como Ruidosa Fest (Chile).
               </p>
             </motion.div>
 

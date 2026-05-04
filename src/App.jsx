@@ -6,6 +6,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Store from './components/Store';
 import LeadMagnet from './components/LeadMagnet';
+import Lanzamientos from './components/Lanzamientos';
 import BlogPreview from './components/BlogPreview';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
@@ -23,18 +24,20 @@ function HomePage() {
       <Hero />
       <About />
       <ParallaxBreak
-        image="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop"
+        image="/parallax-break-uno.webp"
         height="h-[50vh] lg:h-[90vh]"
         tint="bg-brand-gold/20"
+        position="top"
       />
       <Services />
       <Store />
       <LeadMagnet />
       <ParallaxBreak
-        image="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=2670&auto=format&fit=crop"
+        image="/IMG_2645.webp"
         height="h-[50vh] lg:h-[90vh]"
         tint="bg-brand-terracotta/20"
       />
+      <Lanzamientos />
       <BlogPreview />
       <Newsletter />
       <Footer />

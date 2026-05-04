@@ -1,4 +1,4 @@
-export default function ParallaxBreak({ image, height = 'h-[60vh]', tint = 'bg-brand-gold/20' }) {
+export default function ParallaxBreak({ image, height = 'h-[60vh]', tint = 'bg-brand-gold/20', position = 'center' }) {
   return (
     <div className={`relative w-full ${height} overflow-hidden`} aria-hidden="true">
 
@@ -6,7 +6,7 @@ export default function ParallaxBreak({ image, height = 'h-[60vh]', tint = 'bg-b
       <img
         src={image}
         alt=""
-        className="lg:hidden absolute inset-0 w-full h-full object-cover"
+        className={`lg:hidden absolute inset-0 w-full h-full object-cover object-${position}`}
       />
 
       {/* Desktop: fixed background creates the window/reveal effect */}
@@ -16,11 +16,10 @@ export default function ParallaxBreak({ image, height = 'h-[60vh]', tint = 'bg-b
           backgroundImage: `url(${image})`,
           backgroundAttachment: 'fixed',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: position,
         }}
       />
 
-      <div className="absolute inset-0 bg-brand-ink/40" />
       <div className={`absolute inset-0 ${tint}`} />
     </div>
   );

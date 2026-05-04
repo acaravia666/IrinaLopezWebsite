@@ -5,12 +5,28 @@ export default function LeadMagnet() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setName('');
-    setEmail('');
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/lead-magnet', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email }),
+      });
+      if (!res.ok) throw new Error();
+      setSubmitted(true);
+      setName('');
+      setEmail('');
+    } catch {
+      setError('Hubo un problema. Por favor intenta de nuevo.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -100,10 +116,11 @@ export default function LeadMagnet() {
                         required
                       />
                     </div>
-                    <button type="submit" className="btn-primary w-full mt-4">
-                      Enviar y Descargar Gratis →
+                    <button type="submit" disabled={loading} className="btn-primary w-full mt-4 disabled:opacity-60">
+                      {loading ? 'Enviando…' : 'Enviar y Descargar Gratis →'}
                     </button>
                   </div>
+                  {error && <p className="text-brand-terracotta text-sm mt-3 text-center">{error}</p>}
                   <p className="text-[10px] uppercase tracking-wider text-brand-ink/35 mt-4 text-center font-heading">
                     Cero spam. Solo correos ocasionales que sí vas a querer leer.
                   </p>
