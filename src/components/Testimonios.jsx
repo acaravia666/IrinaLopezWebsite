@@ -3,48 +3,56 @@ import { motion } from 'framer-motion';
 const testimonios = [
   {
     img: '/testimonios/testimonio1.webp',
+    imgPosition: '50% 15%',
     nombre: 'Andrea Villafuerte',
     rol: 'Cantante',
     texto: 'Irina es una persona 100% comprometida con su trabajo. Su pasión por ello, hace que se entregue por completo hasta lograr sus objetivos. Es una persona preparada y altamente resolutiva que con creatividad y conocimiento trae consigo propuestas que aportan al ámbito cultural y artístico del país.',
   },
   {
     img: '/testimonios/testimonio2.webp',
+    imgPosition: '20% 75%',
     nombre: 'Camila Pérez',
     rol: 'Cantautora',
     texto: 'Trabajar con Irina López fue una de las mejores decisiones para mi proyecto artístico. Su compromiso y profesionalismo se notan en cada detalle: desde la organización impecable de conciertos hasta la gestión de entradas y la búsqueda de auspicios. Irina no solo entiende las necesidades del entorno artístico, sino que también sabe cómo convertir ideas en resultados concretos.',
   },
   {
     img: '/testimonios/testimonio3.webp',
+    imgPosition: '50% 20%',
     nombre: 'Israel Maldonado',
     rol: 'Director y productor de eventos',
     texto: 'Que bendición que ahora los artistas podamos contar con alguien como Irina para ser asesorados y acompañados en los diferentes procesos de nuestra industria. Su aporte ha sido esencial en mis proyectos.',
   },
   {
     img: '/testimonios/testimonio4.webp',
+    imgPosition: '50% 3%',
     nombre: 'Pancho Feraud',
     rol: 'Director Agencia Feroz',
     texto: 'Desde que implementamos los contratos que desarrollamos contigo, la relación con nuestros clientes se volvió mucho más clara y sana. Hoy cada parte entiende exactamente cuáles son sus responsabilidades, sus alcances y sus límites dentro de cada campaña, y eso nos ha dado una estructura mucho más profesional.',
   },
   {
     img: '/testimonios/testimonio5.webp',
+    imgPosition: '50% 55%',
     nombre: 'Shalom Mendieta',
     rol: 'Cantautora',
     texto: 'Tener una industria musical en Ecuador es un sueño que todos los artistas del país tenemos. Con su visión y entrega, Irina ha influido en el crecimiento de la escena musical para incentivar la creación, gestión y difusión de la misma. Gracias a su labor como eje de unión, ese sueño se siente cada vez más cercano.',
   },
   {
     img: '/testimonios/testimonio6.webp',
+    imgPosition: '50% 10%',
     nombre: 'Sergio Vivar',
     rol: 'Productor',
     texto: 'Trabajar con Irina fue clave para que mi proyecto de EP ganara un fondo de fomento. Ella se encargó de la formulación del proyecto y me acompañó durante todo el proceso de postulación. Gracias a su asesoría, el proyecto fue seleccionado. Recomiendo su trabajo por su conocimiento y por la forma en que acompaña a los artistas en procesos que suelen ser complejos.',
   },
   {
     img: '/testimonios/testimonio7.webp',
+    imgPosition: '50% 30%',
     nombre: 'Hugo Cedeño',
     rol: 'Productor',
     texto: 'Es una verdadera fortuna para nosotros, los artistas, contar hoy con alguien como Irina. Su asesoría y acompañamiento en cada etapa de nuestro camino no solo enriquecen nuestros procesos, sino que también elevan nuestro arte al lugar de valor y respeto que merece. Estoy profundamente agradecido por su aporte, que ha sido fundamental en mis proyectos.',
   },
   {
     img: '/testimonios/testimonio8.webp',
+    imgPosition: '35% 30%',
     nombre: 'Ñusta Picuasi',
     rol: 'Cantante e influencer',
     texto: 'Antes de trabajar con Irina tenía mucha inconformidad con un contrato de representación que no me hacía sentir tranquila. Finalmente se logró encontrar la solución que estaba buscando y se pudo llegar a un acuerdo claro en el contrato. Recomiendo totalmente su servicio porque es fundamental trabajar con alguien que tenga comunicación, comprensión y que te haga sentir cómoda.',
@@ -106,6 +114,7 @@ export default function Testimonios() {
                   src={t.img}
                   alt={t.nombre}
                   className="w-12 h-12 rounded-full object-cover flex-shrink-0 ring-2 ring-brand-cream/20"
+                  style={t.imgPosition ? { objectPosition: t.imgPosition } : undefined}
                 />
                 <div>
                   <p className="font-heading font-semibold text-brand-cream text-sm leading-tight">{t.nombre}</p>
